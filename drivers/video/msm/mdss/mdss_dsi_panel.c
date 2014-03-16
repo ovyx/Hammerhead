@@ -344,10 +344,6 @@ static int mdss_dsi_panel_on(struct mdss_panel_data *pdata)
 	else
 		ctrl->on_cmds.cmds[1].payload[0] = 0xFF;
 
-#ifdef CONFIG_PWRKEY_SUSPEND
-	pwrkey_pressed = false;	
-#endif
-
 	mutex_lock(&panel_cmd_mutex);
 	if (local_pdata->on_cmds.cmd_cnt)
 		mdss_dsi_panel_cmds_send(ctrl, &local_pdata->on_cmds);
