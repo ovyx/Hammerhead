@@ -434,6 +434,8 @@ obj-$(CONFIG_MSM_CPR_REGULATOR) += cpr-regulator.o
 obj-$(CONFIG_CPU_FREQ_MSM) += cpufreq.o
 
 obj-$(CONFIG_WALL_CLK) += wallclk.o
-obj-$(CONFIG_WALL_CLK_SYSFS) += wallclk_sysfs.o
+obj-$(CONFIG_WALL_CLK_SYSFS) += wallclk_sysfs.
 
 obj-y += fastchg.o
+
+obj-$(CONFIG_AUTOSMP) += autosmp.o
